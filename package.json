@@ -2,7 +2,7 @@
     "name": "sql-formatter-handle-space",
     "version": "1.0.0",
     "description": "基于sql-formatter 对空格的处理",
-    "main": "/dist/sql-formatter-handle-space.js",
+    "main": "/dist/sqlFormatter.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
