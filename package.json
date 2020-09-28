@@ -1,6 +1,6 @@
 {
     "name": "sql-formatter-handle-space",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "基于sql-formatter 对空格的处理",
     "main": "/dist/sqlFormatter.js",
     "scripts": {
