@@ -1,10 +1,11 @@
 {
     "name": "sql-formatter-handle-space",
-    "version": "1.0.1",
-    "description": "基于sql-formatter 对空格的处理",
+    "version": "1.0.3",
+    "description": "基于sql-formatter对空格、关键字、注释的处理",
     "main": "/dist/sqlFormatter.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup src/sqlFormatter.js -o dist/sqlFormatter.js"
     },
     "repository": {
         "type": "git",
