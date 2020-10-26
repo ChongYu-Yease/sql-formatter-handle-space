@@ -2,6 +2,7 @@ import { terser } from 'rollup-plugin-terser'
 import babel from 'rollup-plugin-babel'
 export default {
     input: './src/sqlFormatter.js',
+    external: ['lodash'],
     // "build:amd": "rollup src/sqlFormatter.js -f amd -o ./dist/sqlFormatter.amd.js",
     // "build:cjs": "rollup src/sqlFormatter.js -f cjs -o ./dist/sqlFormatter.cjs.js",
     // "build:es": "rollup src/sqlFormatter.js -f es -o ./dist/sqlFormatter.es.js",
@@ -10,29 +11,29 @@ export default {
     // "build:all": "npm run build:amd && npm run build:cjs && npm run build:es && npm run build:iife && npm run build:umd"
     output: [
         {
-            file: './dist/sqlFormatter.umd.js',
+            file: './dist/sql-formatter.umd.js',
             format: 'umd',
-            name: 'sqlFormatter.umd.js',
+            name: 'sqlFormatter',
         },
         {
-            file: './dist/sqlFormatter.cjs.js',
+            file: './dist/sql-formatter.cjs.js',
             format: 'cjs',
-            name: 'sqlFormatter.cjs.js',
+            name: 'sqlFormatter',
         },
         {
-            file: './dist/sqlFormatter.es.js',
+            file: './dist/sql-formatter.es.js',
             format: 'es',
-            name: 'sqlFormatter.es.js',
+            name: 'sqlFormatter',
         },
+        // {
+        //     file: './dist/sql-formatter.iife.js',
+        //     format: 'iife',
+        //     name: 'sqlFormatter',external:["lodash"],
+        // },
         {
-            file: './dist/sqlFormatter.iife.js',
-            format: 'iife',
-            name: 'sqlFormatter.iife.js',
-        },
-        {
-            file: './dist/sqlFormatter.amd.js',
+            file: './dist/sql-formatter.amd.js',
             format: 'amd',
-            name: 'sqlFormatter.amd.js',
+            name: 'sqlFormatter',
         },
     ],
     plugins: [
