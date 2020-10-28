@@ -1,5 +1,4 @@
-import repeat from 'lodash/repeat'
-import last from 'lodash/last'
+import { repeat, last } from 'lodash'
 
 const INDENT_TYPE_TOP_LEVEL = 'top-level'
 const INDENT_TYPE_BLOCK_LEVEL = 'block-level'

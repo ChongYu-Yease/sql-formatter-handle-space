@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import babel from 'rollup-plugin-babel'
 
 export default {
-    input: './src/sql-formatter.js',
+    input: './sql-formatter/sql-formatter.js',
     output: [
         {
             file: 'dist/sql-formatter.umd.js',

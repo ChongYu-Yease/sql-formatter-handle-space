@@ -1,4 +1,4 @@
-import trimEnd from 'lodash/trimEnd'
+import { trimEnd } from 'lodash'
 import tokenTypes from './tokenTypes'
 import Indentation from './Indentation'
 import InlineBlock from './InlineBlock'
@@ -322,7 +322,13 @@ export default class Formatter {
 
     formaReserverdWords(token, query) {
         if (this.indentation.getWhiteSpace()) {
-            return query + token.value.toLowerCase() + ' '
+            // return query + token.value.toLowerCase() + ' '
+            // 如果关键字 as if 等关键字 前面有空格 就不用加空格了 如果前面没有空格 就需要加一个空格
+            if (query.charAt(query.length - 1) === ' ') {
+                return query + token.value.toLowerCase() + ' '
+            } else {
+                return query + ' ' + token.value.toLowerCase() + ' '
+            }
         } else {
             // 如果关键字 as if 等关键字 前面有空格 就不用加空格了 如果前面没有空格 就需要加一个空格
             if (query.charAt(query.length - 1) === ' ') {
@@ -334,9 +340,6 @@ export default class Formatter {
     }
 
     formatWithSpaces(token, query) {
-        if (token.value === '$' || token.value === '{' || token.value === '}') {
-            console.log(token, query)
-        }
         if (this.indentation.getWhiteSpace()) {
             return query + token.value + ' '
         } else {

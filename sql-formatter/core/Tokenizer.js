@@ -1,5 +1,5 @@
-import isEmpty from 'lodash/isEmpty'
-import escapeRegExp from 'lodash/escapeRegExp'
+import { isEmpty, escapeRegExp } from 'lodash'
+
 import tokenTypes from './tokenTypes'
 
 export default class Tokenizer {
