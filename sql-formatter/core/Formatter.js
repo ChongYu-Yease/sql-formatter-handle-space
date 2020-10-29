@@ -136,7 +136,6 @@ export default class Formatter {
             this.tokens[this.index] = commaToken
             return this.formatComma(commaToken, query)
         }
-
         // 给获取过来的每一行行注释 从下标2开始添加空格
         const value = token.value
         token.value = value.split('')
@@ -147,7 +146,6 @@ export default class Formatter {
             token.value.splice(2, 0, ' ')
             token.value = token.value.join('')
         }
-
         if (this.previousNonWhitespaceToken().type === tokenTypes.UNION_WORDS) {
             query = trimEnd(query) + ' ' + token.value
             this.indentation.setNoTrimEnd()
